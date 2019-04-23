@@ -7,6 +7,7 @@ import sys
 
 i=int(sys.argv[1])
 Osato_dir = lambda i: '/scratch/02977/jialiu/OsatoSims/%s_lensdat/'%(['DM', 'FE', 'BA'][i])
+istd = 0.02#std(conv_smooth)
 
 def NGstats_gen(num):
     folder = Osato_dir(i)+'run%02d/'%(num)
@@ -17,7 +18,6 @@ def NGstats_gen(num):
 
     ## smooth the conv_map
     conv_smooth=conv_map.smooth(2.0*u.arcmin,kind="gaussianFFT",inplace=0)
-    istd = 0.02#std(conv_smooth)
     kappabins = np.linspace(-3.,5., 51)*istd
 
     ## 1.peak counts
