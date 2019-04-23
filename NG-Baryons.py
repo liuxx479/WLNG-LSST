@@ -8,7 +8,7 @@ import sys
 i=int(sys.argv[1])
 Osato_dir = lambda i: '/scratch/02977/jialiu/OsatoSims/%s_lensdat/'%(['DM', 'FE', 'BA'][i])
 
-def NGstats_gen(num, i):
+def NGstats_gen(num):
     folder = Osato_dir(i)+'run%02d/'%(num)
     print folder
 
