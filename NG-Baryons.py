@@ -52,3 +52,4 @@ out = pool.map(NGstats_gen, range(100))
 save('/scratch/02977/jialiu/OsatoSims/stats/NG_%s.npy'%(['DM', 'FE', 'BA'][i]), out)
 print "DONE DONE DONE"
 
+pool.close()
